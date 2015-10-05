@@ -64,8 +64,8 @@ class wptallyconnect_widget extends WP_Widget {
         if( $instance['username'] ) {
             $data = wptallyconnect_get_data( $instance['username'] );
 
-            if( array_key_exists( 'error', $data ) ) {
-                echo $data['error'];
+            if( array_key_exists( 'error', $data['plugins'] ) ) {
+                echo $data['plugins']['error'];
             } else {
                 // Do stuff
                 var_dump( $data );
